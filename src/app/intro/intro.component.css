@@ -1,0 +1,45 @@
+.introdiv {
+  background-color: rgb(245, 255, 254);
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+.basic-1 {
+  padding-top: 6.5rem;
+  padding-bottom: 3rem;
+}
+
+.basic-1 .text-container {
+  margin-bottom: 3rem;
+}
+
+.basic-1 .section-title {
+  margin-bottom: 0.5rem;
+}
+
+.basic-1 h2 {
+  margin-bottom: 1.375rem;
+}
+
+.basic-1 .testimonial-author {
+  color: #484a46;
+}
+
+/* Hover Animation */
+.basic-1 .image-container {
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.basic-1 .image-container img {
+  margin: 0;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+}
+
+.basic-1 .image-container:hover img {
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+/* end of hover animation */

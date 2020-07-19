@@ -1,0 +1,363 @@
+<div class="analyticsdiv">
+  <!-- Sidebar/menu -->
+  <nav
+    class="w3-sidebar w3-collapse w3-white w3-animate-left"
+    style="z-index: 3; width: 300px;"
+    id="mySidebar"
+  >
+    <br />
+    <div class="w3-container w3-row">
+      <div class="w3-col s4">
+        <img
+          src="https://picsum.photos/id/1027/200/200"
+          class="w3-circle w3-margin-right"
+          style="width: 46px;"
+        />
+      </div>
+      <div class="w3-col s8 w3-bar">
+        <span>Welcome, <strong>FooName</strong></span
+        ><br />
+        <a class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+        <a class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+        <a class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      </div>
+    </div>
+    <hr />
+    <div class="w3-container">
+      <h5>Dashboard (dummies)</h5>
+    </div>
+    <div class="w3-bar-block">
+      <a
+        class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+        onclick="w3_close()"
+        title="close menu"
+        ><i class="fa fa-remove fa-fw"></i> Close Menu</a
+      >
+      <a class="w3-bar-item w3-button w3-padding w3-blue"
+        ><i class="fa fa-users fa-fw"></i> Overview</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-eye fa-fw"></i> Views</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-users fa-fw"></i> Traffic</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-bullseye fa-fw"></i> Geo</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-diamond fa-fw"></i> Orders</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-bell fa-fw"></i> News</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-bank fa-fw"></i> General</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-history fa-fw"></i> History</a
+      >
+      <a class="w3-bar-item w3-button w3-padding"
+        ><i class="fa fa-cog fa-fw"></i> Settings</a
+      ><br /><br />
+    </div>
+  </nav>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div
+    class="w3-overlay w3-hide-large w3-animate-opacity"
+    onclick="w3_close()"
+    style="cursor: pointer;"
+    title="close side menu"
+    id="myOverlay"
+  ></div>
+  <div
+    class="w3-overlay w3-hide-large w3-animate-opacity"
+    onclick="w3_close()"
+    style="cursor: pointer;"
+    title="close side menu"
+    id="myOverlay"
+  ></div>
+  <div class="w3-main" style="margin-left: 300px; margin-top: 43px;">
+    <!-- Header -->
+    <header class="w3-container" style="padding-top: 22px;">
+      <h5>
+        <b><i class="fa fa-eye"></i> Average : PageViews / Minute </b>
+      </h5>
+    </header>
+
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-third">
+        <div class="w3-container w3-deep-purple w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf108;</i></div>
+          <div class="w3-right">
+            <h3>
+              {{ conditionalAnalytics?.average.average_users_on_website }}
+            </h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Website</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-blue w3-padding-12">
+          <div class="w3-left">
+            <i class="fa w3-xxxlarge">&#xf015;</i>
+          </div>
+          <div class="w3-right">
+            <h3>{{ conditionalAnalytics?.average.home_page }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Home Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-blue w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf118;</i></div>
+          <div class="w3-right">
+            <h3>{{ conditionalAnalytics?.average.introduction_page }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Introduction Page</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-third">
+        <div class="w3-container w3-blue w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf0f4;</i></div>
+          <div class="w3-right">
+            <h3>{{ conditionalAnalytics?.average.about_page }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>About Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-blue w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf1d8;</i></div>
+          <div class="w3-right">
+            <h3>{{ conditionalAnalytics?.average.contact_page }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Contact Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-blue w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf121;</i></div>
+          <div class="w3-right">
+            <h3>
+              {{ conditionalAnalytics?.average.analytics_dashboard_page }}
+            </h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Analytics Dashboard</h4>
+        </div>
+      </div>
+    </div>
+
+    <header class="w3-container" style="padding-top: 22px;">
+      <h5>
+        <b><i class="fa fa-eye"></i>Life Time Page Views(Unique Users)</b>
+      </h5>
+    </header>
+
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-third">
+        <div class="w3-container w3-deep-purple w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf108;</i></div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.visited_users_on_website }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Website</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-green w3-padding-12">
+          <div class="w3-left">
+            <i class="fa w3-xxxlarge">&#xf015;</i>
+          </div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.home_page.count }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Home Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-green w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf118;</i></div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.introduction_page.count }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Introduction Page</h4>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-third">
+        <div class="w3-container w3-green w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf0f4;</i></div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.about_page.count }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>About Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-green w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf1d8;</i></div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.contact_page.count }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Contact Page</h4>
+        </div>
+      </div>
+      <div class="w3-third">
+        <div class="w3-container w3-green w3-text-white w3-padding-12">
+          <div class="w3-left"><i class="fa w3-xxxlarge">&#xf121;</i></div>
+          <div class="w3-right">
+            <h3>{{ detailedAnalytics?.analytics_dashboard_page.count }}</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Analytics Dashboard</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-panel">
+      <div class="w3-row-padding" style="margin: 0 -16px;">
+        <div class="w3-third">
+          <h5>Regions(dummy)</h5>
+          <img
+            src="https://www.w3schools.com/w3images/region.jpg"
+            style="width: 100%;"
+            alt="Google Regional Map"
+          />
+        </div>
+        <div class="w3-twothird">
+          <h5>Feeds(dummy)</h5>
+          <table class="w3-table w3-striped w3-white">
+            <tr>
+              <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+              <td>New record, over 90 views.</td>
+              <td><i>10 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+              <td>Database error.</td>
+              <td><i>15 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
+              <td>New record, over 40 users.</td>
+              <td><i>17 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
+              <td>New comments.</td>
+              <td><i>25 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+              <td>Check transactions.</td>
+              <td><i>28 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
+              <td>CPU overload.</td>
+              <td><i>35 mins</i></td>
+            </tr>
+            <tr>
+              <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
+              <td>New shares.</td>
+              <td><i>39 mins</i></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="w3-container">
+      <h5>Operating System</h5>
+      <table
+        class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white"
+      >
+        <tr *ngFor="let os_name of detailedAnalytics?.os_name | keyvalue">
+          <td>
+            <b>{{ os_name.key[0].toUpperCase() }} &emsp; - </b>{{ os_name.key }}
+          </td>
+          <td>{{ os_name.value }}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <hr /> -->
+    <div class="w3-container">
+      <h5>Service Providers</h5>
+      <table
+        class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white"
+      >
+        <tr
+          *ngFor="let operator_name of detailedAnalytics?.operator | keyvalue"
+        >
+          <td>
+            <b>{{ operator_name.key[0].toUpperCase() }} &emsp; - </b
+            >{{ operator_name.key }}
+          </td>
+          <td>{{ operator_name.value }}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <hr /> -->
+    <div class="w3-container">
+      <h5>Countries</h5>
+      <table
+        class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white"
+      >
+        <tr *ngFor="let country_name of detailedAnalytics?.country | keyvalue">
+          <td>
+            <b>{{ country_name.key[0].toUpperCase() }} &emsp; - </b
+            >{{ country_name.key }}
+          </td>
+          <td>{{ country_name.value }}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <hr /> -->
+    <div class="w3-container">
+      <h5>States</h5>
+      <table
+        class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white"
+      >
+        <tr *ngFor="let state_name of detailedAnalytics?.state | keyvalue">
+          <td>
+            <b>{{ state_name.key[0].toUpperCase() }} &emsp; - </b
+            >{{ state_name.key }}
+          </td>
+          <td>{{ state_name.value }}</td>
+        </tr>
+      </table>
+    </div>
+    <!-- <hr /> -->
+    <div class="w3-container">
+      <h5>Cities</h5>
+      <table
+        class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white"
+      >
+        <tr *ngFor="let city_name of detailedAnalytics?.city | keyvalue">
+          <td>
+            <b>{{ city_name.key[0].toUpperCase() }} &emsp; - </b
+            >{{ city_name.key }}
+          </td>
+          <td>{{ city_name.value }}</td>
+        </tr>
+      </table>
+    </div>
+    <hr />
+  </div>
+</div>

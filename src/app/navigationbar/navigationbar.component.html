@@ -1,0 +1,31 @@
+<div>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="https://i.ibb.co/yRbKFbF/logo.png" alt="logo" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a (click)="setTitle('Home')" routerLink="home">HOME</a></li>
+          <li>
+            <a (click)="setTitle('Introduction')" routerLink="intro"
+              >INTRODUCTION</a
+            >
+          </li>
+          <li><a (click)="setTitle('About')" routerLink="about">ABOUT</a></li>
+          <li>
+            <a (click)="setTitle('Contact')" routerLink="contact">CONTACT</a>
+          </li>
+          <li>
+            <a
+              (click)="setTitle('Analytics Dashboard')"
+              routerLink="analytics"
+              class="dashboard"
+              >Analytics Dashboard</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</div>
